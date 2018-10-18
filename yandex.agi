@@ -13,7 +13,6 @@ try:
 except Exception as err:
     print('AGI greate except -> %s'%err)
 
-
 def get_file():
     return sys.argv[1]+'label'+sys.argv[2].replace(' ','')+'.wav'
 def set_file():
