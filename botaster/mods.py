@@ -19,7 +19,7 @@ import smtplib
 from os.path import basename
 
 
-YANDEX_API_KEY = '3c28338a-219d-4ca4-9243-a0e4e673c4f6'#'16a830d4-b0a9-4bcd-830f-af208fdb83a1'
+YANDEX_API_KEY = ''
 
 YANDEX_ASR_HOST = 'asr.yandex.net'
 YANDEX_ASR_PATH = '/asr_xml'
@@ -48,10 +48,10 @@ def get_temp_files(fullcall_id):
     return [tmppath + x for x in os.listdir(tmppath) if x.find(call_id) != -1]
 
 def alarm_to_telegramm(mess):
-    p = 'https://mike007:R7i7YbE@91.211.88.155:65233'
+    p = ''
     proxy={'https':p, 'http':p}
-    token='580440068:AAHS2uckeIu-ygxOKEvCaGrPExdK9COf_rA'
-    chat = 326404173 #blm47
+    token=''
+    chat =  #blm47
     data = {"chat_id":chat,
                "text":mess}
     url = 'https://api.telegram.org/bot%s/sendMessage' % token
@@ -90,7 +90,7 @@ def send_to_help(body_text, fullcall_id, subject='From bot_Anton', to_emails=['h
     msg = msg.as_string()
 
     server = smtplib.SMTP('mail.respect-mail.ru', 587)
-    server.login('bot_anton@respect-mail.ru', 'XSuy43F7zTVp')
+    server.login('bot_anton@respect-mail.ru', '')
     server.sendmail(from_addr, emails, msg)
     server.quit()
     return True
